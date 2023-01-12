@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col">
-      <h2 class="text-3xl font-bold mb-3">{{herosCount}} Heróis da DC</h2>
+      <h2 class="text-3xl font-bold mb-3 text-center">{{herosCount}} Heróis da DC</h2>
       <div v-for="(hero, index) in dcHeros" :key="hero.name"
       >
         <div class="flex justify-between">
