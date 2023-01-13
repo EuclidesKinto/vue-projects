@@ -14,6 +14,13 @@
             {{item.title}}
         </router-link>
       </div>
+      <div class="flex items-center mt-3 space-x-4 md:mt-0">
+        <button
+            @click="$emit('openLoginModal')"
+            class="relative text-center bg-teal-50 px-5 py-1 rounded text-gray-700 transition hover:text-blue-500">
+          Login
+        </button>
+      </div>
     </div>
 
   </div>
