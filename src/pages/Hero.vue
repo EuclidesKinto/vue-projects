@@ -1,7 +1,9 @@
 <template>
   <div class="flex justify-center container mt-10 mx-auto ">
     <div class="flex-col">
-      <h2 class="text-3xl font-bold mb-3 text-center">{{herosCount}} Heróis da DC</h2>
+      <h2 class="text-3xl font-bold mb-3 text-center">
+        {{herosCount}} {{pluralHerosCount}}
+      </h2>
       <div v-for="(hero, index) in dcHeros" :key="hero.name">
         <div class="flex justify-between">
           <span class="text-lg">{{index+1}} - {{hero.name}}</span>
@@ -43,6 +45,9 @@ export default {
   computed:{
     herosCount(){
       return this.dcHeros.length;
+    },
+    pluralHerosCount(){
+      return this.dcHeros.length <= 1 ? 'Herói Cadastrado' : 'Heróis Cadastrados';
     }
   },
   methods:{
