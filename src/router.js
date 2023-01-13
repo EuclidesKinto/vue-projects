@@ -4,17 +4,22 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import('./components/Home.vue')
+        component: () => import('./pages/Home.vue')
     },
     {
         path: '/hero',
         name: 'hero',
-        component: () => import('./components/Hero.vue')
+        component: () => import('./pages/Hero.vue')
     },
     {
         path: '/calendar',
         name: 'calendar',
-        component: () => import('./components/Calendar.vue')
+        component: () => import('./pages/Calendar.vue')
+    },
+    {
+        path: '/markdown',
+        name: 'markdown',
+        component: () => import('./pages/Markdown.vue')
     },
 ]
 const router = createRouter({
