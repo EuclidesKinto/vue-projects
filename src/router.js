@@ -21,6 +21,11 @@ const routes = [
         name: 'markdown',
         component: () => import('./pages/Markdown.vue')
     },
+    {
+        path: '/slider',
+        name: 'slider',
+        component: () => import('./pages/Slider.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHistory(),

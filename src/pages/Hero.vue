@@ -1,8 +1,8 @@
 <template>
-  <div class="flex-col">
+  <div class="flex justify-center container mt-10 mx-auto ">
+    <div class="flex-col">
       <h2 class="text-3xl font-bold mb-3 text-center">{{herosCount}} Heróis da DC</h2>
-      <div v-for="(hero, index) in dcHeros" :key="hero.name"
-      >
+      <div v-for="(hero, index) in dcHeros" :key="hero.name">
         <div class="flex justify-between">
           <span class="text-lg">{{index+1}} - {{hero.name}}</span>
           <div @click="removeHero(index)" class="px-2 my-2 bg-red-500 rounded-full w-min cursor-pointer">
@@ -24,6 +24,7 @@
         </span>
       </form>
     </div>
+  </div>
 </template>
 
 <script>

@@ -1,35 +1,37 @@
 <template>
-  <div class="flex-col">
-      <h2 class="text-3xl font-bold text-center pb-3">Calendário Vue</h2>
-      <section class="flex py-5 justify-center bg-blue-100">
-        <p class="font-extrabold text-xl">{{currentMonthName.toUpperCase()}} - {{currentYear}}</p>
+  <div class="flex justify-center container mt-10 mx-auto ">
+    <div class="flex-col">
+        <h2 class="text-3xl font-bold text-center pb-3">Calendário Vue</h2>
+        <section class="flex py-5 justify-center bg-blue-100">
+          <p class="font-extrabold text-xl">{{currentMonthName.toUpperCase()}} - {{currentYear}}</p>
+        </section>
+        <section class="flex py-2 w-96 ">
+          <p class="text-center" style="width: 14.28%" v-for="day in days" :key="day">
+            {{ day }}
+          </p>
+        </section>
+       <section class="flex flex-wrap  w-96 h-52 border-t">
+         <p
+             class="text-center"
+             style="width: 14.28%"
+            v-for="num in startDay()" :key="num" >
+         </p>
+         <p
+             class="text-center my-2 "
+             style="width: 14.28%"
+            v-for="num in (daysInMonth())" :key="num"
+            :class="currentDateClass(num)">
+           {{num}}
+         </p>
+       </section>
+      <section class="flex justify-between mt-5 w-96 border-t pt-2">
+        <button @click="prev"
+            class="hover:bg-gray-100 px-3 text-gray-500 rounded border">Prev</button>
+        <button @click="next"
+            class="hover:bg-gray-100 px-3 text-gray-500 rounded border">Next </button>
       </section>
-      <section class="flex py-2 w-96 ">
-        <p class="text-center" style="width: 14.28%" v-for="day in days" :key="day">
-          {{ day }}
-        </p>
-      </section>
-     <section class="flex flex-wrap  w-96 h-52 border-t">
-       <p
-           class="text-center"
-           style="width: 14.28%"
-          v-for="num in startDay()" :key="num" >
-       </p>
-       <p
-           class="text-center my-2 "
-           style="width: 14.28%"
-          v-for="num in (daysInMonth())" :key="num"
-          :class="currentDateClass(num)">
-         {{num}}
-       </p>
-     </section>
-    <section class="flex justify-between mt-5 w-96 border-t pt-2">
-      <button @click="prev"
-          class="hover:bg-gray-100 px-3 text-gray-500 rounded border">Prev</button>
-      <button @click="next"
-          class="hover:bg-gray-100 px-3 text-gray-500 rounded border">Next </button>
-    </section>
-    </div>
+      </div>
+  </div>
 </template>
 
 <script>
