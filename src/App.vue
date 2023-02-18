@@ -1,4 +1,3 @@
-
 <template>
   <Header @openLoginModal="isLoginOpen = true"/>
   <router-view></router-view>

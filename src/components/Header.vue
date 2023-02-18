@@ -36,6 +36,8 @@ export default {
         {title: "Calendário", to: "/calendar"},
         {title: "Markdown", to: "/markdown"},
         {title: "Slide Carrossel", to: "/slider"},
+        {title: "Calculadora", to: "/calculator"},
+        {title: "FeedBack", to: "/review"},
       ]
     }
   }

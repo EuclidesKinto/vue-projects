@@ -26,6 +26,14 @@ const routes = [
         name: 'slider',
         component: () => import('./pages/Slider.vue')
     },
+    {
+        path: '/calculator',
+        component: () => import('./pages/Calculator.vue')
+    },
+    {
+        path: '/review',
+        component: () => import('./pages/Review.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHistory(),
